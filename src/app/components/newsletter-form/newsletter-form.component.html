@@ -1,0 +1,25 @@
+<section class="form-section">
+    <div class="text">
+        <h3>
+            Agende uma entrevista!
+        </h3>
+        <p>
+            Para agendar entrevista basta acessar meu número de WhatsApp
+        </p>
+    </div>
+    <form [formGroup]="newsletterForm">
+        <label for="name"> Nome </label>
+        <input id="name" formControlName="name" type="text"/>
+
+        <label for="email"> Email </label>
+        <input id="email" formControlName="email" type="email"/>
+
+        <btn-primary
+        btn-text="Mande uma mensagem"
+        variant="secondary"
+        (submit) = "onSubmit()"
+        [disabled]="!newsletterForm.valid"
+        [loading]="loading()"
+        > </btn-primary>
+    </form>
+</section>

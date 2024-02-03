@@ -1,11 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 type btnVariants = "primary" | "secondary";
 
 @Component({
-  selector: 'app-buttom-primary',
+  selector: 'btn-primary',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './buttom-primary.component.html',
   styleUrl: './buttom-primary.component.scss'
 })
